@@ -1,0 +1,42 @@
+.grid {
+  .row {
+    $width: 52px;
+    $height: 30px;
+    display: flex;
+
+    &.even {
+      margin-left: ($width / 2) + 1px;
+    }
+
+    &:not(:first-child) {
+      margin-top: -($height / 2);
+    }
+
+    .hexagon {
+      $color: #8ce9ca;
+
+      margin: 1px;
+
+      %tb-same {
+        border-left: ($width / 2) solid transparent;
+        border-right: ($width / 2) solid transparent;
+      }
+
+      .top {
+        @extend %tb-same;
+        border-bottom: ($height / 2) solid $color;
+      }
+
+      .bottom {
+        @extend %tb-same;
+        border-top: ($height / 2) solid $color;
+      }
+
+      .middle {
+        width: $width;
+        height: $height;
+        background-color: $color;
+      }
+    }
+  }
+}
