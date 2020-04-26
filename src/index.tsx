@@ -5,7 +5,7 @@ import * as hex from "./Hex/Hex";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <React.StrictMode>{hex.Grid(10, 10)}</React.StrictMode>,
+  <React.StrictMode>{hex.Grid(11, 10)}</React.StrictMode>,
   document.getElementById("root")
 );
 

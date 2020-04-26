@@ -13,13 +13,13 @@ function Hexagon() {
 
 function Row(count: number, isEven: boolean) {
   const hexagons = [];
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < count - (isEven ? 1 : 0); i++) {
     hexagons.push(Hexagon());
   }
 
   let className = "row";
   if (isEven) {
-    className += " even"
+    className += " even";
   }
   return <div className={className}>{hexagons}</div>;
 }
